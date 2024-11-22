@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Authentication</title>
     <link rel="stylesheet" href="styles.css">
-
+    <script src="https://kit.fontawesome.com/e8f236398d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="login-container">
      <div>
         <form>
-            <i class="fa-solid fa-envelope" style="color: #f4f6fb;"></i>
-            <input type="text" class="name" placeholder="Enter your username"/><br><br>
+            <div class="input-group">
+                <i class=" fa fa-regular fa-user"></i> 
+                <input type="text" class="name" placeholder="Enter your username"/><br><br>
+            </div>
+           <div class="input-group">
+            <i class="fa fa-lock"></i>
             <input type="text" class="password" placeholder="Enter your password"/><br><br>
+           </div>     
             <button type="submit">Login</button>      
         </form>
      </div>
