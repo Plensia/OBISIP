@@ -1,0 +1,85 @@
+:root{
+    --background-light: #ffffff;
+    --background-dark: #1e1e1e;
+    --button-light: #f3f3f3;
+    --button-dark: #2d2d2d;
+    --accent-light: #f96d00;
+    --accent-dark: #ffa500;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.light{
+    background: var(--background-light);
+    color: var(--text-light);
+}
+
+body.dark{
+    background: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.calculator{
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.theme-toggle{
+    text-align: center;
+    padding: 10px;
+    background: var(--accent-light);
+    cursor: pointer;
+}
+
+.display{
+    padding: 20px;
+    font-size: 24px;
+}
+
+.display expression{
+    opacity: 0.6;
+}
+
+.display .result{
+    font-size: 40px;
+}
+
+.button-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button{
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:active{
+    background: var(--accent-light);
+}
+
+body.light button{
+    background: var(--accent-light);
+    color: var(--text-light);
+}
+
+body.dark button{
+    background: var(--button-dark);
+    color: var(--text-dark);
+}
+.result-button{
+    grid-column: span 4;
+    background: var(--accent-light);
+    color: #fff;
+}
