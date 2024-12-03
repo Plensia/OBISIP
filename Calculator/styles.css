@@ -20,7 +20,7 @@ body.dark {
 
 .calculator {
     width: 100%;
-    max-width: 375px;
+    max-width: 280px;
     padding: 20px;
     border-radius: 30px;
     background-color: #fff;
@@ -146,17 +146,5 @@ body.dark .btn:hover {
 }
 
 body.dark .btn.number {
-    color: #fff;
-}
-
-.status-bar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    color: #000;
-    margin-bottom: 10px;
-}
-
-body.dark .status-bar {
     color: #fff;
 }
