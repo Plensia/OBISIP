@@ -1,60 +1,118 @@
-// Select elements
-const themeSun = document.getElementById('theme-sun');
-const themeMoon = document.getElementById('theme-moon');
-const body = document.body;
-const resultDisplay = document.getElementById('result');
-const expressionDisplay = document.getElementById('expression');
-const buttons = document.querySelectorAll('button');
+let currentNumber = '0';
+        let previousNumber = null;
+        let operation = null;
+        let shouldResetDisplay = false;
 
-let expression = ''; // To store the math expression
-let currentResult = ''; // To store the current number
+        const resultDisplay = document.getElementById('result');
+        const equationDisplay = document.getElementById('equation');
+        const lightThemeBtn = document.getElementById('lightTheme');
+        const darkThemeBtn = document.getElementById('darkTheme');
 
-// Theme toggle functionality
-themeSun.addEventListener('click', () => {
-  body.classList.remove('dark');
-  body.classList.add('light');
-});
+        // Theme Toggle
+        lightThemeBtn.addEventListener('click', () => {
+            document.body.classList.remove('dark');
+            lightThemeBtn.classList.add('active');
+            darkThemeBtn.classList.remove('active');
+        });
 
-themeMoon.addEventListener('click', () => {
-  body.classList.remove('light');
-  body.classList.add('dark');
-});
+        darkThemeBtn.addEventListener('click', () => {
+            document.body.classList.add('dark');
+            darkThemeBtn.classList.add('active');
+            lightThemeBtn.classList.remove('active');
+        });
 
-// Button functionality
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const number = button.getAttribute('data-number');
-    const operator = button.getAttribute('data-operator');
-    const id = button.id;
+        // Calculator Functions
+        function updateDisplay(value) {
+            resultDisplay.textContent = Number(value).toLocaleString();
+        }
 
-    if (number) {
-      currentResult += number;
-      expression += number;
-    } else if (operator) {
-      if (/[+\-*/%]/.test(expression.slice(-1))) {
-        expression = expression.slice(0, -1); // Replace operator if last char is an operator
-      }
-      expression += operator;
-      currentResult = '';
-    } else if (id === 'clear') {
-      expression = '';
-      currentResult = '';
-    } else if (id === 'backspace') {
-      if (currentResult) {
-        currentResult = currentResult.slice(0, -1);
-        expression = expression.slice(0, -1);
-      }
-    } else if (id === 'equals') {
-      try {
-        currentResult = eval(expression.replace(/÷/g, '/').replace(/×/g, '*'));
-        expression = currentResult.toString();
-      } catch {
-        currentResult = 'Error';
-      }
-    }
+        function handleNumber(num) {
+            if (shouldResetDisplay) {
+                currentNumber = num;
+                shouldResetDisplay = false;
+            } else {
+                currentNumber = currentNumber === '0' ? num : currentNumber + num;
+            }
+            updateDisplay(currentNumber);
+        }
 
-    // Update display
-    expressionDisplay.textContent = expression;
-    resultDisplay.textContent = currentResult || '0';
-  });
-});
+        function handleOperator(op) {
+            if (previousNumber === null) {
+                previousNumber = currentNumber;
+                equationDisplay.textContent = `${currentNumber} ${op}`;
+            } else {
+                calculate();
+                equationDisplay.textContent = `${resultDisplay.textContent} ${op}`;
+            }
+            operation = op;
+            shouldResetDisplay = true;
+        }
+
+        function calculate() {
+            if (previousNumber === null || operation === null) return;
+
+            const prev = parseFloat(previousNumber);
+            const current = parseFloat(currentNumber);
+            let result;
+
+            switch (operation) {
+                case '+': result = prev + current; break;
+                case '-': result = prev - current; break;
+                case '×': result = prev * current; break;
+                case '÷': result = prev / current; break;
+                default: return;
+            }
+
+            currentNumber = result.toString();
+            updateDisplay(currentNumber);
+            previousNumber = null;
+            operation = null;
+        }
+
+        function handleDecimal() {
+            if (!currentNumber.includes('.')) {
+                currentNumber += '.';
+                resultDisplay.textContent = currentNumber;
+            }
+        }
+
+        function handlePercentage() {
+            currentNumber = (parseFloat(currentNumber) / 100).toString();
+            updateDisplay(currentNumber);
+        }
+
+        function handleToggleSign() {
+            currentNumber = (parseFloat(currentNumber) * -1).toString();
+            updateDisplay(currentNumber);
+        }
+
+        // Event Listeners
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.textContent;
+
+                if (value.match(/[0-9]/)) {
+                    handleNumber(value);
+                } else if (['+', '-', '×', '÷'].includes(value)) {
+                    handleOperator(value);
+                } else if (value === '=') {
+                    calculate();
+                    equationDisplay.textContent = '';
+                } else if (value === 'AC') {
+                    currentNumber = '0';
+                    previousNumber = null;
+                    operation = null;
+                    equationDisplay.textContent = '';
+                    updateDisplay('0');
+                } else if (value === '.') {
+                    handleDecimal();
+                } else if (value === '%') {
+                    handlePercentage();
+                } else if (value === '±') {
+                    handleToggleSign();
+                } else if (value === '↺') {
+                    currentNumber = currentNumber.slice(0, -1) || '0';
+                    updateDisplay(currentNumber);
+                }
+            });
+        });
