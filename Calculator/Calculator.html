@@ -11,53 +11,49 @@
 </head>
 <body>
     <div class="calculator">
+
         <div class="theme-toggle">
-            <button class="theme-toggle-btn light-mode-btn" aria-label="Switch to light mode">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"/>
-                    <line x1="12" y1="1" x2="12" y2="3"/>
-                    <line x1="12" y1="21" x2="12" y2="23"/>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                    <line x1="1" y1="12" x2="3" y2="12"/>
-                    <line x1="21" y1="12" x2="23" y2="12"/>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                </svg>
-            </button>
-            
-            <button class="theme-toggle-btn dark-mode-btn" aria-label="Switch to dark mode">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                </svg>
-            </button>
+            <div class="theme-options">
+                <button class="theme-btn active" id="lightTheme" aria-label="Light theme">
+                    ☀️
+                </button>
+                <button class="theme-btn" id="darkTheme" aria-label="Dark theme">
+                    🌙
+                </button>
+            </div>
         </div>
         <div class="display">
-            <div class="expression" id="expression">900+900</div>
-            <div class="result" id="result">1800</div>
+            <div class="equation" id="equation"></div>
+            <div class="result" id="result">0</div>
         </div>
-        <div class="button-container">
-            <button id="clear"> AC</button>
-            <button id="backspace"> ⌫</button>
-            <button data-operator="%"> %</button>
-            <button data-operator="/"> ÷</button>
-            <button data-operator="7"> 7</button>
-            <button data-operator="8"> 8</button>
-            <button data-operator="9"> 9</button>
-            <button data-operator="*"> x</button>
-            <button data-operator="4"> 4</button>
-            <button data-operator="5"> 5</button>
-            <button data-operator="6"> 6</button>
-            <button data-operator="-"> -</button>
-            <button data-operator="1"> 1</button>
-            <button data-operator="2"> 2</button>
-            <button data-operator="3"> 3</button>
-            <button data-operator="+"> +</button>
-            <button data-operator="0" class="0"> 0</button>
-            <button data-operator="."> .</button>
-            <button id="result-button" class="result-button"> =</button>
+        <div class="keypad">
+            <button class="btn function">AC</button>
+            <button class="btn function">±</button>
+            <button class="btn function">%</button>
+            <button class="btn operator">÷</button>
+            
+            <button class="btn number">7</button>
+            <button class="btn number">8</button>
+            <button class="btn number">9</button>
+            <button class="btn operator">×</button>
+            
+            <button class="btn number">4</button>
+            <button class="btn number">5</button>
+            <button class="btn number">6</button>
+            <button class="btn operator">-</button>
+            
+            <button class="btn number">1</button>
+            <button class="btn number">2</button>
+            <button class="btn number">3</button>
+            <button class="btn operator">+</button>
+            
+            <button class="btn number">⌫</button>
+            <button class="btn number">0</button>
+            <button class="btn number">.</button>
+            <button class="btn operator">=</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
