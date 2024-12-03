@@ -38,10 +38,15 @@ body.dark{
     background: var(--accent-light);
     cursor: pointer;
 }
-
+.theme-toggle i{
+    font-size: 24px;
+    color: var(--text-light);
+}
 .display{
     padding: 20px;
     font-size: 24px;
+    background: var(--background-light);
+    color: var(--text-light);
 }
 
 .display expression{
@@ -55,6 +60,9 @@ body.dark{
 .button-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    
+    gap: 5px;
+    background: var(--accent-light);
 }
 
 button{
@@ -82,4 +90,5 @@ body.dark button{
     grid-column: span 4;
     background: var(--accent-light);
     color: #fff;
+    font-size: 24px;
 }

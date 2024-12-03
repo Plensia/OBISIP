@@ -10,32 +10,35 @@
 <body>
     <div class="calculator">
         <div class="theme-toggle">
-            <button><i class="bi bi-moon-fill"></i></button>
+            <div class="theme-toggle d-flex justify-content-center align-items-center">
+                <i id="theme-sun" class="bi bi-sun me-2"></i>
+                <i id="theme-moon" class="bi bi-moon"></i>
+              </div>
         </div>
         <div class="display">
-            <div class="expression">900+900</div>
-            <div class="result">1800</div>
+            <div class="expression" id="expression">900+900</div>
+            <div class="result" id="result">1800</div>
         </div>
         <div class="button-container">
-            <button> AC</button>
-            <button> ⌫</button>
-            <button> %</button>
-            <button> ÷</button>
-            <button> 7</button>
-            <button> 8</button>
-            <button> 9</button>
-            <button> x</button>
-            <button> 4</button>
-            <button> 5</button>
-            <button> 6</button>
-            <button> -</button>
-            <button> 1</button>
-            <button> 2</button>
-            <button> 3</button>
-            <button> +</button>
-            <button> 0</button>
-            <button> .</button>
-            <button class="result-button"> =</button>
+            <button id="clear"> AC</button>
+            <button id="backspace"> ⌫</button>
+            <button data-operator="%"> %</button>
+            <button data-operator="/"> ÷</button>
+            <button data-operator="7"> 7</button>
+            <button data-operator="8"> 8</button>
+            <button data-operator="9"> 9</button>
+            <button data-operator="*"> x</button>
+            <button data-operator="4"> 4</button>
+            <button data-operator="5"> 5</button>
+            <button data-operator="6"> 6</button>
+            <button data-operator="-"> -</button>
+            <button data-operator="1"> 1</button>
+            <button data-operator="2"> 2</button>
+            <button data-operator="3"> 3</button>
+            <button data-operator="+"> +</button>
+            <button data-operator="0" class="0"> 0</button>
+            <button data-operator="."> .</button>
+            <button id="result-button" class="result-button"> =</button>
         </div>
     </div>
     <script src="script.js"></script>
