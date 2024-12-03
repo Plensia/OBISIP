@@ -1,19 +1,23 @@
-// Select necessary elements
-const themeToggle = document.getElementById('theme-toggle');
+// Select elements
+const themeSun = document.getElementById('theme-sun');
+const themeMoon = document.getElementById('theme-moon');
 const body = document.body;
 const resultDisplay = document.getElementById('result');
 const expressionDisplay = document.getElementById('expression');
 const buttons = document.querySelectorAll('button');
 
-// Variables to store the calculator state
-let expression = '';
-let currentResult = '0';
+let expression = ''; // To store the math expression
+let currentResult = ''; // To store the current number
 
 // Theme toggle functionality
-themeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark');
-  body.classList.toggle('light');
-  themeToggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+themeSun.addEventListener('click', () => {
+  body.classList.remove('dark');
+  body.classList.add('light');
+});
+
+themeMoon.addEventListener('click', () => {
+  body.classList.remove('light');
+  body.classList.add('dark');
 });
 
 // Button functionality
@@ -24,24 +28,21 @@ buttons.forEach((button) => {
     const id = button.id;
 
     if (number) {
-      if (currentResult === '0' || /[+\-*/%]/.test(expression.slice(-1))) {
-        currentResult = number;
-      } else {
-        currentResult += number;
-      }
+      currentResult += number;
       expression += number;
     } else if (operator) {
       if (/[+\-*/%]/.test(expression.slice(-1))) {
-        expression = expression.slice(0, -1);
+        expression = expression.slice(0, -1); // Replace operator if last char is an operator
       }
       expression += operator;
+      currentResult = '';
     } else if (id === 'clear') {
       expression = '';
-      currentResult = '0';
+      currentResult = '';
     } else if (id === 'backspace') {
-      if (expression.length > 0) {
+      if (currentResult) {
+        currentResult = currentResult.slice(0, -1);
         expression = expression.slice(0, -1);
-        currentResult = currentResult.slice(0, -1) || '0';
       }
     } else if (id === 'equals') {
       try {
@@ -54,6 +55,6 @@ buttons.forEach((button) => {
 
     // Update display
     expressionDisplay.textContent = expression;
-    resultDisplay.textContent = currentResult;
+    resultDisplay.textContent = currentResult || '0';
   });
 });
