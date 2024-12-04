@@ -30,8 +30,8 @@ The project consists of three main parts:
 ## Preview
 
 The calculator automatically adapts to light and dark mode preferences and provides a smooth user experience with visual feedback on button interactions.
-![Screenshot 2024-12-04 095407](https://github.com/user-attachments/assets/3417b232-4b81-4e13-afd1-849d083d86c8)
-![Screenshot 2024-12-04 095430](https://github.com/user-attachments/assets/475a0308-54e3-43d3-9d1d-bae5cf642d65)
+![Screenshot 2024-12-04 095430](https://github.com/user-attachments/assets/17f3ea25-47e9-4fff-b0a0-590ba02b2707)
+![Screenshot 2024-12-04 095407](https://github.com/user-attachments/assets/dcb7b411-17d3-4a92-81e9-0d0a06152c58)
 
 
 ## License
