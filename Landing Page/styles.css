@@ -26,6 +26,7 @@ nav{
     width: 100%;
     z-index: 100;
     display: flex;
+    flex: 1;
     justify-content: space-between;
     align-items: center;
 }
@@ -144,25 +145,25 @@ nav{
     transform: translateY(-5px);
 }
 
-.testimonials{
+.testimonial{
     padding: 4rem 5%;
     background: var(--bg);
 }
 
-.testimonials-grid{
+.testimonial-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minimax(300px, 1fr));
     gap: 2rem;
 }
 
-.testimonials-card{
+.testimonial-card{
     padding: 2rem;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-.testimonials-author{
+.testimonial-author{
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -170,8 +171,8 @@ nav{
 }
 
 .author-image{
-    width: 50px;
-    height: 50px;
+    width: 77px;
+    height: 77px;
     border-radius: 50%;
     background: var(--bg);
     overflow: hidden;
@@ -181,7 +182,7 @@ nav{
     height: 100%;
     object-fit: cover;
 }
-.footer{
+footer{
     background: var(--text);
     color: white;
     padding: 4rem 5% 2rem;
