@@ -11,9 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
-
 
 body{
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -22,7 +20,7 @@ body{
     line-height: 1.6;
 }
 
-nav{
+.nav{
     background: white;
     padding: 1rem 5%;
     box-shadow: 0 2px 10px rgba(0 0 0/ 10%);
@@ -66,14 +64,6 @@ nav{
     min-height: 90vh;
 }
 
-.hero-image {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .hero-image img {
     width: 100%;
     max-width: 600px;
@@ -87,7 +77,6 @@ nav{
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: var(--text);
 }
 
 .hero-content p{
@@ -95,8 +84,7 @@ nav{
     color: #64748b;
     margin-bottom: 2rem;
 }
-
-.cta-primary{
+.cta-primary {
     display: inline-block;
     padding: 1rem 2rem;
     background: var(--primary);
@@ -107,17 +95,16 @@ nav{
     transition: all 0.3s;
 }
 
-.cta-primary:hover{
-     background: var(--accent);
-     transform: translateY(-2px);
+.cta-primary:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
 }
-
 .stats{
     padding:  4rem 5%;
     background: var(--primary);
     color: white;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minimax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     text-align: center;
 }
@@ -138,7 +125,8 @@ nav{
      font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
-.services-grid{
+.services-grid,
+.testimonial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minimax(300px, 1fr));
     gap: 2rem;
@@ -148,14 +136,13 @@ nav{
     padding: 2rem;
     border-radius: 12px;
     background: var(--bg);
-    transition: transform 0.3s;
+    transition: var(--transition);
 }
 
 .service-card:hover{
     transform: translateY(-5px);
+    box-shadow:  0 10px 20px rgba(0 0 0 / 5%);
 }
-
-
 
 .testimonial-card{
     padding: 2rem;
@@ -175,7 +162,6 @@ nav{
     width: 77px;
     height: 77px;
     border-radius: 50%;
-    background: var(--bg);
     overflow: hidden;
 }
 .author-image img{
@@ -183,14 +169,14 @@ nav{
     height: 100%;
     object-fit: cover;
 }
-footer{
+.footer{
     background: var(--text);
     color: white;
     padding: 2rem 5%;
     text-align: center;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .hero{
         grid-template-columns: 1fr;
         text-align: center;
@@ -199,10 +185,6 @@ footer{
 
     .nav-links{
         display: none;
-    }
-
-    .hero-content h1{
-        font-size: 2.5rem;
     }
 
     .hero-image{
