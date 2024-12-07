@@ -126,3 +126,35 @@ nav{
 .service-card:hover{
     transform: translateY(-5px);
 }
+
+.testimonials{
+    padding: 4rem 5%;
+    background: var(--bg);
+}
+
+.testimonials-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minimax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonials-card{
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.testimonials-author{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.author-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--bg);
+}
