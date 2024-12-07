@@ -167,5 +167,17 @@ nav{
 }
 
 @media (max-width: 768px){
-    
+    .hero{
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 6rem 5% 3rem;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
 }
