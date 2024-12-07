@@ -56,6 +56,23 @@ nav{
     align-items: center;
 }
 
+.hero-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
 .hero h1{
     font-size: 3.5rem;
     line-height: 1.2;
@@ -157,8 +174,13 @@ nav{
     height: 50px;
     border-radius: 50%;
     background: var(--bg);
+    overflow: hidden;
 }
-
+.author-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .footer{
     background: var(--text);
     color: white;
@@ -179,5 +201,9 @@ nav{
 
     .hero-content h1{
         font-size: 2.5rem;
+    }
+    .hero-image img{
+        max-width: 100%;
+        height: auto;
     }
 }
