@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #13111C;
+    --accent-orange: #FFA500;
+    --accent-purple: #8A2BE2;
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
