@@ -11,3 +11,17 @@ body {
     background-color: var(--primary-color);
     color: var(--text-color);
 }
+
+.navbar {
+    background-color: rgba(19, 17, 28, 0.95);
+    padding: 1rem 0;
+}
+
+.nav-link {
+    color: var(--text-color);
+    margin: 0 1rem;
+}
+
+.nav-link:hover {
+    color: var(--accent-orange);
+}
