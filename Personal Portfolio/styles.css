@@ -273,3 +273,29 @@ nav {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(234, 179, 8, 0.3);
 }
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #9CA3AF;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #1F2937;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.8));
+}
+
+.social-link:hover {
+    color: #EAB308;
+    border-color: #EAB308;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(234, 179, 8, 0.2);
+}
+
