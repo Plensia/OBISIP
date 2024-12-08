@@ -25,3 +25,37 @@ body {
 .nav-link:hover {
     color: var(--accent-orange);
 }
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #13111C 0%, #1E1B2E 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.accent-text {
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.contact-btn {
+    background-color: var(--accent-orange);
+    color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
