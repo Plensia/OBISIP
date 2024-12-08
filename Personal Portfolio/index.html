@@ -42,7 +42,6 @@
     <main>
         <article class="hero d-flex align-items-center" id="home">
          <!-- Hero Section-->
-         <section class="hero d-flex align-items-center" id="home">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -61,12 +60,10 @@
                 </div>
             </div>
         </div>
-        </section>
         </article>
 
         <article class="py-5" id="about">
             <!-- About section-->
-               <section class="py-5" id="about">
                  <div class="container">
                     <h2 class="section-title">About</h2>
                     <div class="row">
@@ -75,12 +72,10 @@
                         </div>
                     </div>
                  </div>
-               </section>
         </article>
         
         <article class="py-5" id="skills">
             <!-- Skills section-->
-        <section class="py-5" id="skills">
           <div class="container">
             <h2 class="section-title">My Skills</h2>
             <div class="row g-4">
@@ -118,8 +113,47 @@
                 </div>
             </div>
           </div>
-        </section>
         </article>
+
+        <article class="py-5" id="portfolio">
+            <!-- Portfolio section with added aria-labels -->
+            <div class="container">
+                <h2 class="section-title">Portfolio</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <article class="portfolio-card" aria-labelledby="weather-app-title">
+                            <img src="/api/placeholder/400/300" alt="Screenshot of Weather Application Interface" class="img-fluid">
+                            <div class="p-4">
+                                <h5 id="weather-app-title">Weather Application</h5>
+                                <p>Interactive weather dashboard using weather API</p>
+                                <a href="#" class="btn btn-sm contact-btn" aria-label="View Weather Application Project">View Project</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="portfolio-card" aria-labelledby="responsive-portfolio-title">
+                            <img src="/api/placeholder/400/300" alt="Portfolio" class="img-fluid">
+                            <div class="p-4">
+                                <h5>Responsive Portfolio</h5>
+                                <p>Personal portfolio website with responsive design</p>
+                                <a href="#" class="btn btn-sm contact-btn">View Project</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="portfolio-card" aria-labelledby="todo-app-title">
+                            <img src="/api/placeholder/400/300" alt="Todo App" class="img-fluid">
+                            <div class="p-4">
+                                <h5>Todo List App</h5>
+                                <p>Dynamic task management application</p>
+                                <a href="#" class="btn btn-sm contact-btn">View Project</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </article>
+
     </main>
 </body>
 </html>
