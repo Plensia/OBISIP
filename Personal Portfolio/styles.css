@@ -299,3 +299,13 @@ nav {
     box-shadow: 0 5px 15px rgba(234, 179, 8, 0.2);
 }
 
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
