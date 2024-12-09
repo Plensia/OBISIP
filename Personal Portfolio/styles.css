@@ -21,12 +21,22 @@ body {
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 1.5rem;
+    z-index: 1000;   
+}
+
+nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 .logo {
@@ -34,10 +44,13 @@ nav {
     font-weight: bold;
 }
 
+.nav-links{
+    display: flex;
+    gap: 1.5rem;
+}
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin-left: 1.5rem;
     transition: color 0.3s;
 }
 
