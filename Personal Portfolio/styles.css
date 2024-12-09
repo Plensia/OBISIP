@@ -44,15 +44,24 @@ nav {
 
 /* Hero Section */
 .hero {
-    padding: 5rem 0;
+    padding: 8rem 0 5rem;
+}
+
+.hero .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 4rem;
+}
+
+.hero-content{
+    flex: 1;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .hero-content span {
@@ -62,6 +71,7 @@ nav {
 .hero-content p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    color: #9CA3AF;
 }
 
 .cta-button {
@@ -72,17 +82,19 @@ nav {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 .cta-button:hover {
     background-color: #CA8A04;
+    transform: translateY(-2px);
 }
 
 .hero-image {
     position: relative;
-    width: 16rem;
-    height: 16rem;
+    width: 24rem;
+    height: 24rem;
+    flex-shrink: 0 ;
 }
 
 .hero-image-blur {
