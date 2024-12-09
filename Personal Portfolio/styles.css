@@ -10,6 +10,15 @@ body {
     color: white;
     line-height: 1.6;
 }
+.section{
+    padding: 5rem 0;
+}
+
+.section-title{
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
 
 nav {
     padding: 1.5rem;
@@ -250,6 +259,17 @@ nav {
     transform: translateX(5px);
 }
 
+.contact-form{
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
 .contact-input {
     width: 100%;
     padding: 1rem;
@@ -260,27 +280,26 @@ nav {
     margin-bottom: 1rem;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
+.contact-input:focus{
+    outline: none;
+    border-color: #EAB308;
+}
+
+textarea.contact-input{
+    resize: vertical;
+    min-height: 150px;
 }
 
 .submit-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
     background: linear-gradient(45deg, #EAB308, #A855F7);
     color: black;
-    padding: 1rem 2rem;
     border: none;
     border-radius: 0.5rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
     margin-top: 1rem;
 }
 
@@ -314,6 +333,15 @@ nav {
     box-shadow: 0 5px 15px rgba(234, 179, 8, 0.2);
 }
 
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 @media (max-width: 768px) {
     .hero .container{
         flex-direction: column;
@@ -332,7 +360,10 @@ nav {
     .contact-grid {
         grid-template-columns: 1fr;
     }
-
+ 
+    .footer-content{
+        flex-direction: ty;
+    }
     
 }
 
