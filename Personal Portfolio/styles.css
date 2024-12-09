@@ -321,29 +321,31 @@ textarea.contact-input{
     box-shadow: 0 5px 15px rgba(234, 179, 8, 0.3);
 }
 
+footer{
+    border-top: 1px solid #1F2937;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
 .social-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
     color: #9CA3AF;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 1px solid #1F2937;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    background: linear-gradient(45deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.8));
+    transition: all 0.3s;
 }
 
 .social-link:hover {
     color: #EAB308;
     border-color: #EAB308;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(234, 179, 8, 0.2);
 }
 
 @media (max-width: 1024px) {
@@ -355,6 +357,7 @@ textarea.contact-input{
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 768px) {
     .hero .container{
         flex-direction: column;
