@@ -175,6 +175,12 @@ nav {
     gap: 2rem;
 }
 
+/* Portfolio Section*/
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
 .portfolio-item {
     position: relative;
     border: 1px solid #1F2937;
@@ -191,25 +197,15 @@ nav {
     box-shadow: 0 0 20px rgba(234, 179, 8, 0.2);
 }
 
-.portfolio-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, #A855F7, #EAB308);
-    opacity: 0.1;
-    transition: opacity 0.3s;
+.portfolio-content h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #EAB308;
 }
 
-.portfolio-item:hover::before {
-    opacity: 0.2;
-}
-
-.portfolio-content {
-    position: relative;
-    z-index: 1;
+.portfolio-content p{
+    color: #9CA3AF;
+    margin-bottom: 1.5rem;
 }
 
 .portfolio-content h3 {
